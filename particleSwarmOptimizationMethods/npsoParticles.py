@@ -29,7 +29,7 @@ The particle class initializes the following arguments:
     Function that takes in two states that define proposed solutions and outputs 
     the solution that most meets the objective. If passing in the global best state,
     and empty list is passed in for localBestState. For typical PSO the states are state = (fitness,x)   
-[1] Behesti et al., "Non-parametric particle swarm optimization for global optimization",Applied Soft. Computing. 2015 
+[1] Behesti et al., "Non-parametric particle swarm optimization for global optimization",Applied Soft. Computing. 2015
 @author: odibua
 """
 import numpy as np
