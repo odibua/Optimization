@@ -17,7 +17,7 @@ more complex problems, the user can define their own particle class.
      
 Within the PSO class, the versions of the optimization algorithm are as follows:
     
-    executePSO: Standard particle swarm optimization (PSO) as described in (SITE Paper)
+    executePSO: Standard particle swarm optimization (PSO) as described in [1]
             
         It takes as inputs:
                 optimType = optimization type ('Max' or 'Min')
@@ -40,8 +40,8 @@ Within the PSO class, the versions of the optimization algorithm are as follows:
                 the solution that most meets the objective. If passing in the global best state,
                 and empty list is passed in for localBestState. For typical PSO the states are state = (fitness,x)
             
-    executeGCPSO: Constrict PSO as described in (SITE PAPER). Variation of particle swarm optimization that updates velocities 
-                  with a pre-factor such that the velocities never go unstable and do not need to be bounded (SITE PAPER)
+    executeGCPSO: Constrict PSO as described in [1]. Variation of particle swarm optimization that updates velocities 
+                  with a pre-factor such that the velocities never go unstable and do not need to be bounded [1]
         
         All inputs are the same as executePSO with the exception of:
                 constrict: A float that indicates to the particle class that the constrict update velocity should be used
@@ -49,14 +49,15 @@ Within the PSO class, the versions of the optimization algorithm are as follows:
     executeNPSO: Non-parametric PSO. Variation of particle swarm optimization that updates velocities using the best position in a neighborhood of 
                  particles and that updates positon using both the velocity and the best position in the swarm. It also 
                  interpolates between solutions found by two random particles, and updates the global best if these
-                 solutions are better (SITE PAPER)
+                 solutions are better [1]
                  
         It removes from the standard PSO the inputs:
             c1, c2
         and adds:
             neighborsize: Size of neighbor to be observed when choosing best neighborhood
             npsoInterpFunc: Function that contains interpolation between states of two particles and returns the
-            interpolated state or the best swarm state according to the evaluation function                                      
+            interpolated state or the best swarm state according to the evaluation function   
+ [1] Behesti et al., "Non-parametric particle swarm optimization for global optimization",Applied Soft. Computing. 2015                                 
 """
 import numpy as np
 import copy

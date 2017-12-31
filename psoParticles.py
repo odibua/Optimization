@@ -6,8 +6,8 @@ Created on Fri Dec 22 22:59:25 2017
 @author: Ohi Dibua
 This file contains a class that defines a particle used in a standard optimization 
 problem solved by standard particle swarm optimization (PSO) or 
-constricted particle swarm optimization (GCPSO). The 
-optimization problems are of the form:
+constricted particle swarm optimization (GCPSO). The optimization 
+problems are of the form: 
     
     min f(x,y)=min f(x) or max f(x,y) = max f(x) where y are inputs with known values
      x          x           x            x
